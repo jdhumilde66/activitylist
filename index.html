@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+      integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+      integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Activity List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">Activity List</h1>
+      <form id="activity-form">
+        <div class="row">
+          <div class="six columns">
+            <label for="activity">Activity</label>
+            <input
+              type="text"
+              class="u-full-width activity"
+              placeholder="Today's Activity"
+            />
+          </div>
+          <div class="six columns">
+            <label for="priority">Priority Type</label>
+            <select name="priorities" class="u-full-width activity-priority">
+              <option value="" selected disabled hidden>
+                Select Priority Type
+              </option>
+              <option value="critical">Critical</option>
+              <option value="non-critical">Non Critical</option>
+              <option value="later">Later</option>
+            </select>
+          </div>
+        </div>
+        <label for="activity-note">Notes:</label>
+        <textarea
+          class="u-full-width activity-note"
+          placeholder="Thoughts..."
+        ></textarea>
+        <input value="Submit" type="submit" class="button-primary" />
+      </form>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Activity</th>
+            <th>Priority Type</th>
+            <th>Notes</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody class="activity-list"></tbody>
+      </table>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
